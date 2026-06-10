@@ -67,8 +67,8 @@ export function AgendaPage() {
 
         <p className="mt-12 max-w-md text-sm text-brand-light/55">
           Para apresentações privadas, festivais ou novas datas, escreva para{" "}
-          <a href="mailto:booking@danella.com" className="text-brand-accent hover:underline">
-            booking@danella.com
+          <a href="mailto:Danielaribeirocontato@hotmail.com" className="text-brand-accent hover:underline break-all">
+            Danielaribeirocontato@hotmail.com
           </a>
           .
         </p>

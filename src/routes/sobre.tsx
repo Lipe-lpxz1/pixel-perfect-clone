@@ -48,27 +48,26 @@ function SobrePage() {
 
           <div className="col-span-6 col-start-7 space-y-4 text-sm leading-relaxed text-brand-light/75 md:space-y-6 md:text-lg">
             <p>
-              Nascida em Goiás e atualmente sediada em São Paulo,{" "}
-              <strong>Danella</strong> construiu sua trajetória unindo
-              sensibilidade artística, visão estratégica e forte presença de
-              palco.
+              De Goiás para São Paulo, <strong>Danella</strong> traçou um
+              caminho próprio na música — guiada pela escuta atenta, pela
+              clareza de propósito e por uma entrega que se desenha
+              inteira no palco.
             </p>
             <p>
-              À frente do projeto <em>Danella Connect in</em>, desenvolve um
-              trabalho autoral focado em criar experiências marcantes através
-              da música.
+              Cantora e compositora, é à frente do projeto{" "}
+              <em>Danella Connect in</em> que dá forma ao seu trabalho
+              autoral: encontros pensados para virar memória, onde a
+              canção se torna experiência compartilhada.
             </p>
             <p>
-              Cantora, compositora e idealizadora do projeto Danella Connectin,
-              a artista reúne sensibilidade artística, visão estratégica e
-              presença de palco em uma carreira construída com consistência,
-              dedicação e propósito.
+              Sua identidade nasce das raízes brasileiras e se afirma em
+              performances que aproximam — emoção que pulsa, energia que
+              contagia, presença que convida o público a habitar a música
+              com ela.
             </p>
             <p>
-              Sua identidade musical nasce das raízes brasileiras e ganha força
-              através de performances que unem emoção, energia e proximidade
-              com o público, consolidando Danella como um dos nomes em ascensão
-              no cenário nacional.
+              Com consistência e propósito, Danella vem consolidando seu
+              nome entre as artistas em ascensão do cenário nacional.
             </p>
 
             <dl className="mt-12 grid grid-cols-2 gap-y-8 border-t border-border pt-12">

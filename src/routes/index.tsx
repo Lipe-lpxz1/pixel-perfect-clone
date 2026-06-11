@@ -124,7 +124,7 @@ function HomePage() {
             <div className="mt-10 overflow-hidden rounded-sm shadow-2xl">
               <iframe
                 title="Player Spotify - Danella"
-                src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/1llghEvUCNeaDpNGu9jjd6?utm_source=generator&theme=0"
                 className="block w-full"
                 height={352}
                 frameBorder={0}

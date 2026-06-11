@@ -18,29 +18,26 @@ export const Route = createFileRoute("/discografia")({
   component: DiscografiaPage,
 });
 
+const covers = [album1, album2, album3];
+
 const records = [
-  {
-    cover: album1,
-    title: "Ecos de Silêncio",
-    year: "2024",
-    type: "LP · 11 faixas",
-    spotify: "1DFixLWuPkv3KT3TnV35m3",
-  },
-  {
-    cover: album2,
-    title: "Hora de Veludo",
-    year: "2022",
-    type: "EP · 5 faixas",
-    spotify: "1DFixLWuPkv3KT3TnV35m3",
-  },
-  {
-    cover: album3,
-    title: "Lumina",
-    year: "2020",
-    type: "Single",
-    spotify: "1DFixLWuPkv3KT3TnV35m3",
-  },
-];
+  "1llghEvUCNeaDpNGu9jjd6",
+  "1EzxTgjKg5mClRtxYWo6M2",
+  "3lUkePCQeZkqqZlpVvC88b",
+  "0bG0faeB4FqNZTqAUpZWxh",
+  "68SRxFA8YQPBQyFUeXSL7i",
+  "3LcpIspnFOud4b1auowP0x",
+  "5VtkGXDG8D8lSt6QduhmDe",
+  "6yZlU1y8SBKEEpmzWa3M4r",
+  "1WcwUsiFkdjax48O9z5xIo",
+  "2pYy1stj8fRLPCooBV0BEh",
+].map((spotify, i) => ({
+  cover: covers[i % covers.length],
+  title: `Faixa ${i + 1}`,
+  year: "",
+  type: "Single",
+  spotify,
+}));
 
 function DiscografiaPage() {
   return (
@@ -64,7 +61,7 @@ function DiscografiaPage() {
               <figure className="group relative overflow-hidden">
                 <img
                   src={r.cover}
-                  alt={`Capa do álbum ${r.title}`}
+                  alt={`Capa de ${r.title}`}
                   loading="lazy"
                   width={1024}
                   height={1024}
@@ -73,21 +70,17 @@ function DiscografiaPage() {
               </figure>
               <div>
                 <p className="text-[10px] uppercase tracking-luxury text-brand-accent">
-                  {r.year} · {r.type}
+                  {String(i + 1).padStart(2, "0")} · {r.type}
                 </p>
                 <h2 className="mt-4 font-display title-fluid">
                   {r.title}
                 </h2>
-                <p className="mt-6 max-w-md leading-relaxed text-brand-light/65">
-                  Uma obra que reúne a delicadeza da canção brasileira com a
-                  amplitude cinematográfica de arranjos orquestrais.
-                </p>
                 <div className="mt-8 overflow-hidden rounded-sm">
                   <iframe
                     title={`Spotify ${r.title}`}
-                    src={`https://open.spotify.com/embed/album/${r.spotify}?utm_source=generator&theme=0`}
+                    src={`https://open.spotify.com/embed/track/${r.spotify}?utm_source=generator&theme=0`}
                     className="block w-full"
-                    height={352}
+                    height={152}
                     frameBorder={0}
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"

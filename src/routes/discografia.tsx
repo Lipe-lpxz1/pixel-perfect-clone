@@ -24,21 +24,21 @@ const records = [
     title: "Ecos de Silêncio",
     year: "2024",
     type: "LP · 11 faixas",
-    spotify: "1DFixLWuPkv3KT3TnV35m3",
+    spotify: "1EzxTgjKg5mClRtxYWo6M2",
   },
   {
     cover: album2,
     title: "Hora de Veludo",
     year: "2022",
     type: "EP · 5 faixas",
-    spotify: "1DFixLWuPkv3KT3TnV35m3",
+    spotify: "3lUkePCQeZkqqZlpVvC88b",
   },
   {
     cover: album3,
     title: "Lumina",
     year: "2020",
     type: "Single",
-    spotify: "1DFixLWuPkv3KT3TnV35m3",
+    spotify: "0bG0faeB4FqNZTqAUpZWxh",
   },
 ];
 
@@ -85,7 +85,7 @@ function DiscografiaPage() {
                 <div className="mt-8 overflow-hidden rounded-sm">
                   <iframe
                     title={`Spotify ${r.title}`}
-                    src={`https://open.spotify.com/embed/album/${r.spotify}?utm_source=generator&theme=0`}
+                    src={`https://open.spotify.com/embed/track/${r.spotify}?utm_source=generator&theme=0`}
                     className="block w-full"
                     height={352}
                     frameBorder={0}

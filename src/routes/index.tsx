@@ -6,6 +6,7 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import album1 from "@/assets/album-1.jpg";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Scrollytelling } from "@/components/Scrollytelling";
+import { SpotifyTracks } from "@/components/SpotifyTracks";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -121,16 +122,8 @@ function HomePage() {
               como força.
             </p>
 
-            <div className="mt-10 overflow-hidden rounded-sm shadow-2xl">
-              <iframe
-                title="Player Spotify - Danella"
-                src="https://open.spotify.com/embed/track/1llghEvUCNeaDpNGu9jjd6?utm_source=generator&theme=0"
-                className="block w-full"
-                height={352}
-                frameBorder={0}
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
+            <div className="mt-10">
+              <SpotifyTracks />
             </div>
           </div>
 

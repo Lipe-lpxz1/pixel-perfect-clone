@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "@/components/SectionLabel";
-import { SpotifyTracks } from "@/components/SpotifyTracks";
 import album1 from "@/assets/album-1.jpg";
 import album2 from "@/assets/album-2.jpg";
 import album3 from "@/assets/album-3.jpg";
@@ -25,21 +24,21 @@ const records = [
     title: "Ecos de Silêncio",
     year: "2024",
     type: "LP · 11 faixas",
-    spotify: "1EzxTgjKg5mClRtxYWo6M2",
+    spotify: "1DFixLWuPkv3KT3TnV35m3",
   },
   {
     cover: album2,
     title: "Hora de Veludo",
     year: "2022",
     type: "EP · 5 faixas",
-    spotify: "3lUkePCQeZkqqZlpVvC88b",
+    spotify: "1DFixLWuPkv3KT3TnV35m3",
   },
   {
     cover: album3,
     title: "Lumina",
     year: "2020",
     type: "Single",
-    spotify: "0bG0faeB4FqNZTqAUpZWxh",
+    spotify: "1DFixLWuPkv3KT3TnV35m3",
   },
 ];
 
@@ -83,8 +82,16 @@ function DiscografiaPage() {
                   Uma obra que reúne a delicadeza da canção brasileira com a
                   amplitude cinematográfica de arranjos orquestrais.
                 </p>
-                <div className="mt-8">
-                  <SpotifyTracks title={`Spotify ${r.title}`} />
+                <div className="mt-8 overflow-hidden rounded-sm">
+                  <iframe
+                    title={`Spotify ${r.title}`}
+                    src={`https://open.spotify.com/embed/album/${r.spotify}?utm_source=generator&theme=0`}
+                    className="block w-full"
+                    height={352}
+                    frameBorder={0}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </article>

@@ -31,8 +31,8 @@ function SobrePage() {
           </h1>
         </header>
 
-        <div className="grid grid-cols-12 gap-6 md:gap-16">
-          <figure className="col-span-12 md:col-span-5">
+        <div className="md:grid md:grid-cols-12 md:gap-16 lg:gap-16">
+          <figure className="mb-8 md:mb-0 md:float-left md:mr-10 md:w-[42%] lg:hidden">
             <img
               src={aboutImg}
               alt="Retrato editorial de Danella"
@@ -43,7 +43,18 @@ function SobrePage() {
             />
           </figure>
 
-          <div className="col-span-12 md:col-span-6 md:col-start-7 space-y-4 text-sm leading-relaxed text-brand-light/75 md:space-y-6 md:text-lg">
+          <figure className="hidden lg:block lg:col-span-5">
+            <img
+              src={aboutImg}
+              alt="Retrato editorial de Danella"
+              loading="lazy"
+              width={1200}
+              height={1500}
+              className="w-full object-cover"
+            />
+          </figure>
+
+          <div className="space-y-4 text-sm leading-relaxed text-brand-light/75 md:space-y-6 md:text-lg lg:col-span-6 lg:col-start-7">
             <p>
               Nascida em Goiás e atualmente sediada em São Paulo,{" "}
               <strong>Danella</strong> construiu sua trajetória unindo
@@ -68,7 +79,7 @@ function SobrePage() {
               no cenário nacional.
             </p>
 
-            <dl className="mt-12 grid grid-cols-2 gap-y-8 border-t border-border pt-12">
+            <dl className="clear-both mt-12 grid grid-cols-2 gap-y-8 border-t border-border pt-12">
               <div>
                 <dt className="text-[10px] uppercase tracking-luxury text-brand-accent">Origem</dt>
                 <dd className="mt-2 font-display text-2xl">Goiás, BR</dd>

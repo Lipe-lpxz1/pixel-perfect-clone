@@ -9,8 +9,8 @@ export function SiteFooter() {
           <div>
             <p className="font-display text-3xl tracking-wide">Danella</p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-light/55">
-              Cantora, intérprete e compositora. Música como cinema — íntima,
-              orquestral, eterna.
+              Cantora, empresária e compositora. A Rainha do Piseiro — um
+              legado que atravessa gerações.
             </p>
           </div>
 

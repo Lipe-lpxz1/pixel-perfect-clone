@@ -32,7 +32,7 @@ function SobrePage() {
         </header>
 
         <div className="grid grid-cols-12 gap-6 md:gap-16">
-          <figure className="col-span-5">
+          <figure className="col-span-12 md:col-span-5">
             <img
               src={aboutImg}
               alt="Retrato editorial de Danella"
@@ -41,12 +41,9 @@ function SobrePage() {
               height={1500}
               className="w-full object-cover"
             />
-            <figcaption className="mt-4 text-[10px] uppercase tracking-luxury text-brand-light/40">
-              Retrato — São Paulo, 2024
-            </figcaption>
           </figure>
 
-          <div className="col-span-6 col-start-7 space-y-4 text-sm leading-relaxed text-brand-light/75 md:space-y-6 md:text-lg">
+          <div className="col-span-12 md:col-span-6 md:col-start-7 space-y-4 text-sm leading-relaxed text-brand-light/75 md:space-y-6 md:text-lg">
             <p>
               Nascida em Goiás e atualmente sediada em São Paulo,{" "}
               <strong>Danella</strong> construiu sua trajetória unindo

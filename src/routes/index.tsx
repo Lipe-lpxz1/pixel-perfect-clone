@@ -46,11 +46,11 @@ function HomePage() {
               Novo álbum • Disponível agora
             </p>
             <h1 className="font-display headline-fluid max-w-[11ch] text-balance text-brand-light">
-              Ecos de <span className="italic">Silêncio</span>
+              Danella <span className="italic">Connect in</span>
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-brand-light/70 md:text-lg">
-              Onze canções sobre travessias, memória e a luz que insiste em
-              voltar. Uma obra cinematográfica, escrita à voz e ao piano.
+              Cantora, empresária e compositora. A Rainha do Piseiro — um
+              legado que atravessa gerações.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -113,12 +113,11 @@ function HomePage() {
           <div>
             <SectionLabel index="03">Último lançamento</SectionLabel>
             <h2 className="mt-6 font-display title-fluid">
-              Ecos de Silêncio
+              Danella Connect in
             </h2>
             <p className="mt-6 max-w-md leading-relaxed text-brand-light/65">
-              Gravado entre São Paulo e Lisboa, o álbum reúne onze canções
-              originais e duas releituras. Uma exploração íntima da fragilidade
-              como força.
+              Cantora, empresária e compositora. A Rainha do Piseiro — um
+              legado que atravessa gerações.
             </p>
 
             <div className="mt-10 overflow-hidden rounded-sm shadow-2xl">

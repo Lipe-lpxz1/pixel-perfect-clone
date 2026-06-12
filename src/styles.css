@@ -196,17 +196,23 @@
   }
 }
 
-/* Sobre page: tablet layout — image floats so text wraps beside AND below it */
-@media (min-width: 768px) and (max-width: 1023.98px) {
+/* Sobre page: mobile + tablet — image floats so text wraps beside AND below it */
+@media (max-width: 1023.98px) {
   .sobre-figure {
     float: left;
-    width: 42%;
-    margin: 0 2rem 1rem 0;
+    width: 45%;
+    margin: 0 1.25rem 0.75rem 0;
   }
   .sobre-bio::after {
     content: "";
     display: block;
     clear: both;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .sobre-figure {
+    width: 42%;
+    margin: 0 2rem 1rem 0;
   }
 }
 

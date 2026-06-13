@@ -45,23 +45,18 @@ function GaleriaPage() {
         <div className="grid grid-cols-12 gap-3 md:gap-6">
           <button onClick={() => setActive(0)} className="gallery-tile group relative col-span-7 overflow-hidden">
             <img src={images[0].src} alt={images[0].alt} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span>{images[0].caption}</span>
           </button>
           <button onClick={() => setActive(1)} className="gallery-tile group relative col-span-5 overflow-hidden">
             <img src={images[1].src} alt={images[1].alt} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span>{images[1].caption}</span>
           </button>
           <button onClick={() => setActive(2)} className="gallery-tile group relative col-span-5 overflow-hidden">
             <img src={images[2].src} alt={images[2].alt} loading="lazy" className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span>{images[2].caption}</span>
           </button>
           <button onClick={() => setActive(3)} className="gallery-tile group relative col-span-7 overflow-hidden">
             <img src={images[3].src} alt={images[3].alt} loading="lazy" className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span>{images[3].caption}</span>
           </button>
           <button onClick={() => setActive(4)} className="gallery-tile group relative col-span-12 overflow-hidden">
             <img src={images[4].src} alt={images[4].alt} loading="lazy" className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span>{images[4].caption}</span>
           </button>
         </div>
       </div>
@@ -86,9 +81,6 @@ function GaleriaPage() {
               alt={images[active].alt}
               className="max-h-[85vh] w-auto object-contain"
             />
-            <figcaption className="mt-4 text-center text-[10px] uppercase tracking-luxury text-brand-light/60">
-              {images[active].caption}
-            </figcaption>
           </figure>
         </div>
       )}

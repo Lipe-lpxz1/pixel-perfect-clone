@@ -4,8 +4,8 @@ import { SectionLabel } from "@/components/SectionLabel";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
-import about from "@/assets/about.jpg";
-import hero from "@/assets/hero.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
 
 export const Route = createFileRoute("/galeria")({
   head: () => ({
@@ -22,11 +22,11 @@ export const Route = createFileRoute("/galeria")({
 });
 
 const images = [
-  { src: hero, alt: "Danella ao microfone, luz dourada", caption: "Sala São Paulo, 2024" },
-  { src: gallery1, alt: "Detalhe — microfone vintage", caption: "Estúdio Vale, Lisboa" },
-  { src: gallery2, alt: "Danella ao piano, contraluz", caption: "Ensaio — Theatro Municipal" },
-  { src: gallery3, alt: "Silhueta no palco", caption: "Festival Coliseu, 2023" },
-  { src: about, alt: "Retrato editorial", caption: "Editorial Vogue Brasil" },
+  { src: gallery1, alt: "Danella no palco, show ao vivo", caption: "Show ao vivo" },
+  { src: gallery2, alt: "Danella cantando, vestido branco", caption: "Performance" },
+  { src: gallery3, alt: "Danella com vestido verde brilhante", caption: "Show" },
+  { src: gallery4, alt: "Danella com vestido rosa", caption: "Ao vivo" },
+  { src: gallery5, alt: "Danella no palco grande", caption: "Festival" },
 ];
 
 function GaleriaPage() {

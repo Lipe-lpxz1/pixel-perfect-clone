@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { SectionLabel } from "@/components/SectionLabel";
 
 export const Route = createFileRoute("/videos")({
@@ -16,63 +17,74 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "lTRiuFIWV54", title: "Ecos de Silêncio (Clipe Oficial)", year: "2024" },
-  { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale", year: "2024" },
-  { id: "DWcJFNfaw9c", title: "Hora de Veludo (Acústico)", year: "2022" },
-  { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo", year: "2023" },
+  { id: "lTRiuFIWV54", title: "Ecos de Silêncio (Clipe Oficial)" },
+  { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale" },
+  { id: "DWcJFNfaw9c", title: "Hora de Veludo (Acústico)" },
+  { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
+  { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
 ];
 
+const thumb = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+
 function VideosPage() {
+  const [active, setActive] = useState<number | null>(null);
+
   return (
     <section className="px-6 pt-40 pb-32 md:px-10 md:pt-48">
       <div className="mx-auto max-w-7xl">
-        <header className="mb-20 max-w-3xl animate-fade-up">
+        <header className="mb-16 max-w-3xl animate-fade-up">
           <SectionLabel index="05">Vídeos</SectionLabel>
           <h1 className="mt-6 font-display title-fluid text-balance">
-            Clipes & ao vivo.
+            Clipes em <em>movimento</em>.
           </h1>
         </header>
 
-        {/* Featured */}
-        <div className="mb-16 overflow-hidden border border-border bg-brand-muted/40">
-          <div className="aspect-video w-full">
-            <iframe
-              src={`https://www.youtube.com/embed/${videos[0].id}?rel=0`}
-              title={videos[0].title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="h-full w-full"
-            />
-          </div>
-          <div className="flex items-center justify-between px-6 py-6">
-            <h2 className="font-display text-2xl md:text-3xl">{videos[0].title}</h2>
-            <span className="text-[10px] uppercase tracking-luxury text-brand-accent">{videos[0].year}</span>
-          </div>
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-3 gap-4 md:gap-8">
-          {videos.slice(1).map((v) => (
-            <article key={v.id} className="group">
-              <div className="aspect-video w-full overflow-hidden border border-border">
-                <iframe
-                  src={`https://www.youtube.com/embed/${v.id}?rel=0`}
-                  title={v.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                  className="h-full w-full"
-                />
-              </div>
-              <div className="mt-4 flex items-baseline justify-between">
-                <h3 className="font-display text-sm leading-tight md:text-lg">{v.title}</h3>
-                <span className="text-[10px] uppercase tracking-luxury text-brand-light/40">{v.year}</span>
-              </div>
-            </article>
-          ))}
+        <div className="grid grid-cols-12 gap-3 md:gap-6">
+          <button onClick={() => setActive(0)} className="gallery-tile group relative col-span-7 overflow-hidden">
+            <img src={thumb(videos[0].id)} alt={videos[0].title} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </button>
+          <button onClick={() => setActive(1)} className="gallery-tile group relative col-span-5 overflow-hidden">
+            <img src={thumb(videos[1].id)} alt={videos[1].title} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </button>
+          <button onClick={() => setActive(2)} className="gallery-tile group relative col-span-5 overflow-hidden">
+            <img src={thumb(videos[2].id)} alt={videos[2].title} loading="lazy" className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </button>
+          <button onClick={() => setActive(3)} className="gallery-tile group relative col-span-7 overflow-hidden">
+            <img src={thumb(videos[3].id)} alt={videos[3].title} loading="lazy" className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </button>
+          <button onClick={() => setActive(4)} className="gallery-tile group relative col-span-12 overflow-hidden">
+            <img src={thumb(videos[4].id)} alt={videos[4].title} loading="lazy" className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </button>
         </div>
       </div>
+
+      {active !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-dark/95 px-4 py-8 backdrop-blur-md animate-quick-fade-in"
+          onClick={() => setActive(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            aria-label="Fechar"
+            onClick={() => setActive(null)}
+            className="absolute right-6 top-6 text-[10px] uppercase tracking-luxury text-brand-light/70 hover:text-brand-accent"
+          >
+            Fechar ✕
+          </button>
+          <div className="w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+            <div className="aspect-video w-full">
+              <iframe
+                src={`https://www.youtube.com/embed/${videos[active].id}?rel=0&autoplay=1`}
+                title={videos[active].title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

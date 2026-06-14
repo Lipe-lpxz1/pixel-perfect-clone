@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { AGENDA_VISIBLE } from "@/lib/feature-flags";
 import heroAsset from "@/assets/hero-danella.png.asset.json";
 import gallery1 from "@/assets/gallery-1.jpg";
-import palcoAsset from "@/assets/palco-danella.png.asset.json";
+import palcoAsset from "@/assets/globo-danella.png.asset.json";
 import album1 from "@/assets/album-1.jpg";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Scrollytelling } from "@/components/Scrollytelling";

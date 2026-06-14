@@ -6,6 +6,7 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
 
 export const Route = createFileRoute("/galeria")({
   head: () => ({
@@ -22,11 +23,12 @@ export const Route = createFileRoute("/galeria")({
 });
 
 const images = [
-  { src: gallery1, alt: "Danella no palco, show ao vivo", caption: "Show ao vivo" },
+  { src: gallery4, alt: "Danella sentada", caption: "Show ao vivo" },
   { src: gallery2, alt: "Danella cantando, vestido branco", caption: "Performance" },
   { src: gallery3, alt: "Danella com vestido verde brilhante", caption: "Show" },
-  { src: gallery4, alt: "Danella com vestido rosa", caption: "Ao vivo" },
+  { src: gallery1, alt: "Danella no palco, show ao vivo", caption: "Ao vivo" },
   { src: gallery5, alt: "Danella no palco grande", caption: "Festival" },
+  { src: gallery6, alt: "Danella", caption: "" },
 ];
 
 function GaleriaPage() {
@@ -57,6 +59,9 @@ function GaleriaPage() {
           </button>
           <button onClick={() => setActive(4)} className="gallery-tile group relative col-span-12 overflow-hidden">
             <img src={images[4].src} alt={images[4].alt} loading="lazy" className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </button>
+          <button onClick={() => setActive(5)} className="gallery-tile group relative col-span-12 overflow-hidden">
+            <img src={images[5].src} alt={images[5].alt} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
           </button>
         </div>
       </div>

@@ -189,7 +189,7 @@
     min-height: 900px;
     transform: translateX(-50%);
     object-fit: cover;
-    object-position: center center;
+    object-position: top center;
   }
   .hero-tinted {
     filter: saturate(0.88) contrast(1.05) sepia(0.18) hue-rotate(-8deg);

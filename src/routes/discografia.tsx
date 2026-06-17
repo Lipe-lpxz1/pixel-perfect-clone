@@ -21,23 +21,23 @@ export const Route = createFileRoute("/discografia")({
 const records = [
   {
     cover: album1,
-    title: "Ecos de Silêncio",
-    year: "2024",
-    type: "LP · 11 faixas",
+    title: "Estamos Longe",
+    year: "2026",
+    type: "Single",
     spotify: "1DFixLWuPkv3KT3TnV35m3",
   },
   {
     cover: album2,
-    title: "Hora de Veludo",
-    year: "2022",
-    type: "EP · 5 faixas",
+    title: "Te Amo na Minha Cabeça",
+    year: "2026",
+    type: "Single",
     spotify: "1DFixLWuPkv3KT3TnV35m3",
   },
   {
     cover: album3,
-    title: "Lumina",
-    year: "2020",
-    type: "Single",
+    title: "Nosso Amor",
+    year: "2025",
+    type: "Single · feat. Pepeu",
     spotify: "1DFixLWuPkv3KT3TnV35m3",
   },
 ];

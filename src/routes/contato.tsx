@@ -28,7 +28,7 @@ function ContatoPage() {
             Vamos criar algo <em>memorável</em>.
           </h1>
           <p className="mt-8 max-w-md leading-relaxed text-brand-light/65">
-            Para shows, festivais, eventos privados, imprensa e parcerias —
+            Para shows, festivais, imprensa e parcerias —
             entre em contato. Respondemos em até 48 horas.
           </p>
 
@@ -87,7 +87,6 @@ function ContatoPage() {
             <select className={inputCls + " appearance-none"} defaultValue="">
               <option value="" disabled>Selecione</option>
               <option>Show / Festival</option>
-              <option>Evento privado</option>
               <option>Imprensa</option>
               <option>Parceria</option>
             </select>

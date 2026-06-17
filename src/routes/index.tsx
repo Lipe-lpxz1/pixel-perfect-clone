@@ -157,7 +157,7 @@ function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent" />
         <div className="absolute inset-x-0 bottom-12 mx-auto max-w-7xl px-6 md:px-10">
           <p className="font-display text-3xl italic text-brand-light/90 md:text-5xl max-w-3xl text-balance">
-            “Cantar é traduzir o tempo em luz.”
+            “Cantar é transformar presença em conexão.”
           </p>
         </div>
       </section>
@@ -167,7 +167,7 @@ function HomePage() {
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <SectionLabel index="04">Contratação</SectionLabel>
           <h2 className="mt-8 font-display title-fluid text-balance">
-            Para um show, festival ou evento privado.
+            Para um show, festival ou evento.
           </h2>
           <Link
             to="/contato"

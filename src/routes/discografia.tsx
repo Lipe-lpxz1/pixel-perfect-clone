@@ -37,7 +37,7 @@ const records = [
     cover: album3,
     title: "Nosso Amor",
     year: "2025",
-    type: "Single · feat. Pepeu",
+    type: "Single",
     spotify: "1DFixLWuPkv3KT3TnV35m3",
   },
 ];

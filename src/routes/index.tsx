@@ -156,11 +156,9 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent" />
         <div className="absolute inset-x-0 bottom-12 mx-auto max-w-7xl px-6 md:px-10">
-          <div className="inline-block bg-brand-dark/40 backdrop-blur-sm px-6 py-4 rounded-sm">
-            <p className="font-display text-3xl italic text-brand-light/90 md:text-5xl whitespace-nowrap">
-              “Cantar é transformar presença em conexão.”
-            </p>
-          </div>
+          <p className="font-display text-3xl italic text-brand-light/90 md:text-5xl whitespace-nowrap">
+            “Cantar é transformar presença em conexão.”
+          </p>
         </div>
       </section>
 

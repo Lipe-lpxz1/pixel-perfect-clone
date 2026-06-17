@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import aboutImg from "@/assets/about.jpg";
+import sobreImg from "@/assets/sobre-danella.jpg.asset.json";
 import { SectionLabel } from "@/components/SectionLabel";
 
 export const Route = createFileRoute("/sobre")({
@@ -34,7 +34,7 @@ function SobrePage() {
         <div className="sobre-layout lg:grid lg:grid-cols-12 lg:gap-16">
           <figure className="sobre-figure mb-8 lg:col-span-5">
             <img
-              src={aboutImg}
+              src={sobreImg.url}
               alt="Retrato editorial de Danella"
               loading="lazy"
               width={1200}

@@ -68,7 +68,7 @@ function DiscografiaPage() {
               }`}
             >
               <figure className="group relative overflow-hidden">
-                <img
+                <img decoding="async"
                   src={r.cover}
                   alt={`Capa do álbum ${r.title}`}
                   loading="lazy"

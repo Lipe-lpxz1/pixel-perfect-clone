@@ -90,7 +90,7 @@ export function Scrollytelling() {
               </p>
             </div>
             <div className="relative aspect-[4/5] w-full overflow-hidden">
-              <img
+              <img decoding="async"
                 src={c.img}
                 alt={c.title}
                 loading="lazy"
@@ -136,7 +136,7 @@ export function Scrollytelling() {
         <div className="flex justify-start lg:col-span-6 lg:col-start-7">
           <div className="sticky top-24 h-[520px] w-[416px] shrink-0 overflow-hidden">
             {chapters.map((c, i) => (
-              <img
+              <img decoding="async"
                 key={c.no}
                 src={c.img}
                 alt={c.title}

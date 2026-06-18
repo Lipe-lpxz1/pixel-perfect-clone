@@ -33,7 +33,7 @@ function SobrePage() {
 
         <div className="sobre-layout lg:grid lg:grid-cols-12 lg:gap-16">
           <figure className="sobre-figure mb-8 lg:col-span-5">
-            <img
+            <img decoding="async"
               src={sobreImg.url}
               alt="Retrato editorial de Danella"
               loading="lazy"

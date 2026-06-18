@@ -33,7 +33,7 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
-        <img
+        <img decoding="async"
           src={heroAsset}
           alt="Danella em performance"
           width={921}
@@ -135,7 +135,7 @@ function HomePage() {
           </div>
 
           <div className="relative aspect-[4/5] w-full overflow-hidden shadow-2xl">
-            <img
+            <img decoding="async"
               src={album1}
               alt="Capa do álbum Ecos de Silêncio"
               loading="lazy"
@@ -151,7 +151,7 @@ function HomePage() {
 
       {/* WIDE IMAGE */}
       <section className="reveal-block relative h-[60vh] min-h-[420px] w-full overflow-hidden">
-        <img
+        <img decoding="async"
           src={palcoAsset}
           alt="Performance ao piano"
           loading="lazy"

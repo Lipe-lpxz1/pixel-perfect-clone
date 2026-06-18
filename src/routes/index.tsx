@@ -34,7 +34,7 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
-        <img decoding="async"
+        <SmartImage
           src={heroAsset}
           alt="Danella em performance"
           width={754}
@@ -42,6 +42,7 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
           className="hero-fixed-image hero-tinted"
+          placeholderClassName="bg-brand-dark"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/50 via-brand-dark/35 to-brand-dark" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/70 via-transparent to-brand-dark/40" />

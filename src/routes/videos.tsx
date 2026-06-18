@@ -74,7 +74,7 @@ function VideosPage() {
                 </button>
               ))}
             </div>
-            <div className="hidden lg:flex lg:flex-col lg:divide-y lg:divide-brand-light/10">
+            <div className="hidden lg:flex lg:flex-col border-t border-b border-brand-light/10 lg:divide-y lg:divide-brand-light/10">
               {videos.map((v, i) => (
                 <button
                   key={v.id + i}

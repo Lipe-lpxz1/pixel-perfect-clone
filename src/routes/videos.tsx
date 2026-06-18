@@ -50,11 +50,6 @@ function VideosPage() {
                 className="h-full w-full"
               />
             </div>
-            <div className="mt-6 flex items-center justify-between border-b border-brand-light/10 pb-6">
-              <h2 className="font-display text-xl md:text-2xl">
-                {videos[active].title}
-              </h2>
-            </div>
           </div>
 
           {/* Lista de vídeos — vertical no desktop, scroll horizontal em mobile/tablet */}

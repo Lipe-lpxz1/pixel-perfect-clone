@@ -77,9 +77,11 @@ function GaleriaPage() {
             Fechar ✕
           </button>
           <figure className="max-h-full max-w-6xl">
-            <img decoding="async"
+            <SmartImage
               src={images[active].src}
               alt={images[active].alt}
+              loading="eager"
+              fetchPriority="high"
               className="max-h-[85vh] w-auto object-contain"
             />
           </figure>

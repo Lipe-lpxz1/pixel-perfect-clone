@@ -84,7 +84,7 @@ function ContatoPage() {
             </Field>
           </div>
           <Field label="Tipo de evento">
-            <select className={inputCls + " appearance-none"} defaultValue="">
+            <select className={inputCls + " appearance-none [&>option]:text-black [&>option]:bg-white"} defaultValue="">
               <option value="" disabled>Selecione</option>
               <option>Show / Festival</option>
               <option>Imprensa</option>

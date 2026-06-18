@@ -18,7 +18,6 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale" },
   { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
   { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
 ];
@@ -51,7 +50,7 @@ function VideosPage() {
                 className="h-full w-full"
               />
             </div>
-            <div className="mt-6 flex items-center justify-between border-b border-brand-light/10 pb-6">
+            <div className="mt-6 flex items-center justify-between border-b border-brand-light/10 pb-2">
               <h2 className="font-display text-xl md:text-2xl">
                 {videos[active].title}
               </h2>

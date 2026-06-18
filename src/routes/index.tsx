@@ -139,7 +139,7 @@ function HomePage() {
           <div className="relative aspect-[4/5] w-full overflow-hidden shadow-2xl">
             <SmartImage
               src={album1}
-              alt="Capa do álbum Ecos de Silêncio"
+              alt="Capa de single de Danella"
               loading="lazy"
               width={800}
               height={800}

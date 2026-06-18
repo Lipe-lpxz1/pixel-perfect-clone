@@ -10,7 +10,7 @@ export const Route = createFileRoute("/sobre")({
       {
         name: "description",
         content:
-          "A trajetória de Danella: formação, influências e o caminho até Ecos de Silêncio.",
+          "A trajetória de Danella: formação, influências e o caminho na música.",
       },
       { property: "og:title", content: "Sobre Danella" },
       { property: "og:description", content: "Biografia da cantora Danella." },

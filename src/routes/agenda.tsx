@@ -32,7 +32,7 @@ export function AgendaPage() {
           <div className="animate-fade-up">
             <SectionLabel index="02">Ao vivo</SectionLabel>
             <h1 className="mt-6 font-display title-fluid text-balance">
-              Turnê <em>Ecos de Silêncio</em>
+              Turnê <em>2025</em>
             </h1>
           </div>
           <p className="border-b border-brand-accent pb-1 text-[10px] uppercase tracking-luxury text-brand-light/50">

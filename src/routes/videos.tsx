@@ -18,7 +18,6 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "lTRiuFIWV54", title: "Ecos de Silêncio (Clipe Oficial)" },
   { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale" },
   { id: "DWcJFNfaw9c", title: "Hora de Veludo (Acústico)" },
   { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },

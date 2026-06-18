@@ -36,8 +36,8 @@ function HomePage() {
         <img decoding="async"
           src={heroAsset}
           alt="Danella em performance"
-          width={921}
-          height={1708}
+          width={754}
+          height={1400}
           loading="eager"
           fetchPriority="high"
           className="hero-fixed-image hero-tinted"
@@ -139,8 +139,8 @@ function HomePage() {
               src={album1}
               alt="Capa do álbum Ecos de Silêncio"
               loading="eager"
-              width={1024}
-              height={1280}
+              width={800}
+              height={800}
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark/50 via-transparent to-transparent" />
@@ -155,8 +155,8 @@ function HomePage() {
           src={palcoAsset}
           alt="Performance ao piano"
           loading="eager"
-          width={1024}
-          height={1280}
+          width={1328}
+          height={624}
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent" />

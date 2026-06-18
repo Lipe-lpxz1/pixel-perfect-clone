@@ -72,8 +72,8 @@ function DiscografiaPage() {
                   src={r.cover}
                   alt={`Capa do álbum ${r.title}`}
                   loading="eager"
-                  width={1024}
-                  height={1024}
+                  width={800}
+                  height={800}
                   className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </figure>

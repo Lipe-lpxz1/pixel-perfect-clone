@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SmartImage } from "@/components/SmartImage";
 import album1 from "@/assets/album-1.webp";
 import album2 from "@/assets/album-2.webp";
 import album3 from "@/assets/album-3.webp";

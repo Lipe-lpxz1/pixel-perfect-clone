@@ -20,7 +20,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Música cinematográfica, ao vivo e em estúdio." },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroAsset, fetchpriority: "high" },
+    ],
   }),
   component: HomePage,
 });

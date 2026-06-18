@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SmartImage } from "@/components/SmartImage";
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
@@ -73,10 +74,10 @@ function VideosPage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="relative w-28 shrink-0 overflow-hidden">
-                  <img decoding="async"
+                  <SmartImage
                     src={thumb(v.id)}
                     alt={v.title}
-                    loading="eager"
+                    loading="lazy"
                     className="aspect-video w-full object-cover"
                   />
                 </div>

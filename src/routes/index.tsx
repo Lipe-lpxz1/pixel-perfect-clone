@@ -6,6 +6,7 @@ import palcoAsset from "@/assets/globo-danella.webp";
 import album1 from "@/assets/album-1.webp";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Scrollytelling } from "@/components/Scrollytelling";
+import { SmartImage } from "@/components/SmartImage";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,7 +34,7 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
-        <img decoding="async"
+        <SmartImage
           src={heroAsset}
           alt="Danella em performance"
           width={754}
@@ -41,6 +42,7 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
           className="hero-fixed-image hero-tinted"
+          placeholderClassName="bg-brand-dark"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/50 via-brand-dark/35 to-brand-dark" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/70 via-transparent to-brand-dark/40" />
@@ -135,10 +137,10 @@ function HomePage() {
           </div>
 
           <div className="relative aspect-[4/5] w-full overflow-hidden shadow-2xl">
-            <img decoding="async"
+            <SmartImage
               src={album1}
               alt="Capa do álbum Ecos de Silêncio"
-              loading="eager"
+              loading="lazy"
               width={800}
               height={800}
               className="absolute inset-0 h-full w-full object-cover"
@@ -151,10 +153,10 @@ function HomePage() {
 
       {/* WIDE IMAGE */}
       <section className="reveal-block relative h-[60vh] min-h-[420px] w-full overflow-hidden">
-        <img decoding="async"
+        <SmartImage
           src={palcoAsset}
           alt="Performance ao piano"
-          loading="eager"
+          loading="lazy"
           width={1328}
           height={624}
           className="absolute inset-0 h-full w-full object-cover"

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SmartImage } from "@/components/SmartImage";
 import album1 from "@/assets/album-1.webp";
 import album2 from "@/assets/album-2.webp";
 import album3 from "@/assets/album-3.webp";
@@ -68,10 +69,10 @@ function DiscografiaPage() {
               }`}
             >
               <figure className="group relative overflow-hidden">
-                <img decoding="async"
+              <SmartImage
                   src={r.cover}
                   alt={`Capa do álbum ${r.title}`}
-                  loading="eager"
+                  loading="lazy"
                   width={800}
                   height={800}
                   className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"

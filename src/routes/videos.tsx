@@ -61,7 +61,7 @@ function VideosPage() {
 
           {/* Lista de vídeos — vertical no desktop, scroll horizontal em mobile/tablet */}
           <div className="col-span-12 flex flex-col divide-y divide-brand-light/10 lg:col-span-4 lg:flex lg:flex-col lg:divide-y">
-            <div className="flex gap-4 overflow-x-auto pb-4 lg:hidden lg:pb-0">
+            <div className="flex gap-3 overflow-x-auto pb-2 lg:hidden lg:pb-0">
               {videos.map((v, i) => (
                 <button
                   key={v.id + i}
@@ -70,7 +70,7 @@ function VideosPage() {
                     i === active ? "text-brand-accent" : "text-brand-light"
                   }`}
                 >
-                  <div className="relative w-40 overflow-hidden">
+                  <div className="relative w-36 overflow-hidden">
                     <SmartImage
                       src={thumb(v.id)}
                       alt={v.title}
@@ -78,9 +78,6 @@ function VideosPage() {
                       className="aspect-video w-full object-cover"
                     />
                   </div>
-                  <span className="mt-2 block font-display text-xs leading-snug">
-                    {v.title}
-                  </span>
                 </button>
               ))}
             </div>

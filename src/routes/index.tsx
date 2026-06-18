@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AGENDA_VISIBLE } from "@/lib/feature-flags";
-import heroAsset from "@/assets/hero-danella.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import palcoAsset from "@/assets/globo-danella.jpg";
-import album1 from "@/assets/album-1.jpg";
+import heroAsset from "@/assets/hero-danella.webp";
+import gallery1 from "@/assets/gallery-1.webp";
+import palcoAsset from "@/assets/globo-danella.webp";
+import album1 from "@/assets/album-1.webp";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Scrollytelling } from "@/components/Scrollytelling";
 
@@ -20,7 +20,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Música cinematográfica, ao vivo e em estúdio." },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroAsset, fetchpriority: "high" },
+    ],
   }),
   component: HomePage,
 });

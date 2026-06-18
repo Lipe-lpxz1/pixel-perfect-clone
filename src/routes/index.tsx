@@ -137,10 +137,10 @@ function HomePage() {
           </div>
 
           <div className="relative aspect-[4/5] w-full overflow-hidden shadow-2xl">
-            <img decoding="async"
+            <SmartImage
               src={album1}
               alt="Capa do álbum Ecos de Silêncio"
-              loading="eager"
+              loading="lazy"
               width={800}
               height={800}
               className="absolute inset-0 h-full w-full object-cover"

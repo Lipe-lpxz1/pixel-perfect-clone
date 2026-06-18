@@ -18,7 +18,6 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "DWcJFNfaw9c", title: "Hora de Veludo (Acústico)" },
   { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
   { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
 ];

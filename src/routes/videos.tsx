@@ -19,7 +19,6 @@ export const Route = createFileRoute("/videos")({
 
 const videos = [
   { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale" },
-  { id: "DWcJFNfaw9c", title: "Hora de Veludo (Acústico)" },
   { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
   { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
 ];
@@ -60,8 +59,8 @@ function VideosPage() {
           </div>
 
           {/* Lista de vídeos — vertical no desktop, scroll horizontal em mobile/tablet */}
-          <div className="col-span-12 flex flex-col divide-y divide-brand-light/10 lg:col-span-4 lg:flex lg:flex-col lg:divide-y">
-            <div className="flex gap-4 overflow-x-auto pb-4 lg:hidden lg:pb-0">
+          <div className="col-span-12 lg:col-span-4">
+            <div className="flex gap-4 overflow-x-auto lg:hidden">
               {videos.map((v, i) => (
                 <button
                   key={v.id + i}

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AGENDA_VISIBLE } from "@/lib/feature-flags";
-import heroAsset from "@/assets/hero-danella.png.asset.json";
+import heroAsset from "@/assets/hero-danella.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import palcoAsset from "@/assets/globo-danella.jpg";
 import album1 from "@/assets/album-1.jpg";
@@ -31,10 +31,10 @@ function HomePage() {
       {/* HERO */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
         <img
-          src={heroAsset.url}
+          src={heroAsset}
           alt="Danella em performance"
-          width={1080}
-          height={1920}
+          width={921}
+          height={1708}
           className="hero-fixed-image hero-tinted"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/50 via-brand-dark/35 to-brand-dark" />

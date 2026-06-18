@@ -35,6 +35,8 @@ function HomePage() {
           alt="Danella em performance"
           width={921}
           height={1708}
+          loading="eager"
+          fetchPriority="high"
           className="hero-fixed-image hero-tinted"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/50 via-brand-dark/35 to-brand-dark" />

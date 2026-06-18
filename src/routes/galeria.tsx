@@ -44,7 +44,7 @@ function GaleriaPage() {
 
         <div className="grid grid-cols-12 gap-3 md:gap-6">
           <button onClick={() => setActive(0)} className="gallery-tile group relative col-span-7 overflow-hidden">
-            <img src={images[0].src} alt={images[0].alt} loading="lazy" className="aspect-[4/3] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+            <img src={images[0].src} alt={images[0].alt} loading="eager" className="aspect-[4/3] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
           </button>
           <button onClick={() => setActive(1)} className="gallery-tile group relative col-span-5 overflow-hidden">
             <img src={images[1].src} alt={images[1].alt} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />

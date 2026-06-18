@@ -69,10 +69,10 @@ function DiscografiaPage() {
               }`}
             >
               <figure className="group relative overflow-hidden">
-                <img decoding="async"
+              <SmartImage
                   src={r.cover}
                   alt={`Capa do álbum ${r.title}`}
-                  loading="eager"
+                  loading="lazy"
                   width={800}
                   height={800}
                   className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"

@@ -3,6 +3,7 @@ import origemAsset from "@/assets/origem.webp";
 import travessiaAsset from "@/assets/travessia.webp";
 import presencaAsset from "@/assets/presenca.webp";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SmartImage } from "@/components/SmartImage";
 
 const chapters = [
   {

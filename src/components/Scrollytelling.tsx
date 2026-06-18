@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import origemAsset from "@/assets/origem.jpg";
-import travessiaAsset from "@/assets/travessia.jpg";
-import presencaAsset from "@/assets/presenca.jpg";
+import origemAsset from "@/assets/origem.webp";
+import travessiaAsset from "@/assets/travessia.webp";
+import presencaAsset from "@/assets/presenca.webp";
 import { SectionLabel } from "@/components/SectionLabel";
 
 const chapters = [

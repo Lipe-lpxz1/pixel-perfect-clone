@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "@/components/SectionLabel";
-import album1 from "@/assets/album-1.jpg";
-import album2 from "@/assets/album-2.jpg";
-import album3 from "@/assets/album-3.jpg";
+import album1 from "@/assets/album-1.webp";
+import album2 from "@/assets/album-2.webp";
+import album3 from "@/assets/album-3.webp";
 
 export const Route = createFileRoute("/discografia")({
   head: () => ({

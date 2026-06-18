@@ -18,7 +18,6 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "DWcJFNfaw9c", title: "Hora de Veludo (Acústico)" },
   { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
   { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
 ];
@@ -51,11 +50,6 @@ function VideosPage() {
                 className="h-full w-full"
               />
             </div>
-            <div className="mt-6 flex items-center justify-between border-b border-brand-light/10 pb-6">
-              <h2 className="font-display text-xl md:text-2xl">
-                {videos[active].title}
-              </h2>
-            </div>
           </div>
 
           {/* Lista de vídeos — vertical no desktop, scroll horizontal em mobile/tablet */}
@@ -80,7 +74,7 @@ function VideosPage() {
                 </button>
               ))}
             </div>
-            <div className="hidden lg:flex lg:flex-col lg:divide-y lg:divide-brand-light/10">
+            <div className="hidden lg:flex lg:flex-col border-t border-b border-brand-light/10 lg:divide-y lg:divide-brand-light/10">
               {videos.map((v, i) => (
                 <button
                   key={v.id + i}

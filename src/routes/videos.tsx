@@ -18,7 +18,6 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale" },
   { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
   { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
 ];

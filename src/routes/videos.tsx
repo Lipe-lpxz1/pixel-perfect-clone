@@ -18,6 +18,8 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
+  { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale" },
+  { id: "DWcJFNfaw9c", title: "Hora de Veludo (Acústico)" },
   { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
   { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
 ];
@@ -50,20 +52,25 @@ function VideosPage() {
                 className="h-full w-full"
               />
             </div>
+            <div className="mt-6 flex items-center justify-between border-b border-brand-light/10 pb-6">
+              <h2 className="font-display text-xl md:text-2xl">
+                {videos[active].title}
+              </h2>
+            </div>
           </div>
 
           {/* Lista de vídeos — vertical no desktop, scroll horizontal em mobile/tablet */}
           <div className="col-span-12 flex flex-col divide-y divide-brand-light/10 lg:col-span-4 lg:flex lg:flex-col lg:divide-y">
-            <div className="flex gap-4 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory lg:hidden lg:pb-0">
+            <div className="flex gap-4 overflow-x-auto pb-4 lg:hidden lg:pb-0">
               {videos.map((v, i) => (
                 <button
                   key={v.id + i}
                   onClick={() => setActive(i)}
-                  className={`shrink-0 text-left snap-start transition-colors hover:text-brand-accent ${
+                  className={`shrink-0 text-left transition-colors hover:text-brand-accent ${
                     i === active ? "text-brand-accent" : "text-brand-light"
                   }`}
                 >
-                  <div className="relative w-36 overflow-hidden">
+                  <div className="relative w-40 overflow-hidden">
                     <SmartImage
                       src={thumb(v.id)}
                       alt={v.title}
@@ -71,10 +78,13 @@ function VideosPage() {
                       className="aspect-video w-full object-cover"
                     />
                   </div>
+                  <span className="mt-2 block font-display text-xs leading-snug">
+                    {v.title}
+                  </span>
                 </button>
               ))}
             </div>
-            <div className="hidden lg:flex lg:flex-col border-t border-b border-brand-light/10 lg:divide-y lg:divide-brand-light/10">
+            <div className="hidden lg:flex lg:flex-col lg:divide-y lg:divide-brand-light/10">
               {videos.map((v, i) => (
                 <button
                   key={v.id + i}

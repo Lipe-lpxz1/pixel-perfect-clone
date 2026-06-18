@@ -60,32 +60,57 @@ function VideosPage() {
             </div>
           </div>
 
-          {/* Lista de vídeos */}
-          <div className="col-span-12 flex flex-col divide-y divide-brand-light/10 lg:col-span-4">
-            {videos.map((v, i) => (
-              <button
-                key={v.id + i}
-                onClick={() => setActive(i)}
-                className={`flex items-center gap-4 py-4 text-left transition-colors hover:text-brand-accent ${
-                  i === active ? "text-brand-accent" : "text-brand-light"
-                }`}
-              >
-                <span className="font-display text-2xl text-brand-light/30">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="relative w-28 shrink-0 overflow-hidden">
-                  <SmartImage
-                    src={thumb(v.id)}
-                    alt={v.title}
-                    loading="lazy"
-                    className="aspect-video w-full object-cover"
-                  />
-                </div>
-                <span className="font-display text-sm leading-snug md:text-base">
-                  {v.title}
-                </span>
-              </button>
-            ))}
+          {/* Lista de vídeos — vertical no desktop, scroll horizontal em mobile/tablet */}
+          <div className="col-span-12 flex flex-col divide-y divide-brand-light/10 lg:col-span-4 lg:flex lg:flex-col lg:divide-y">
+            <div className="flex gap-4 overflow-x-auto pb-4 lg:hidden lg:pb-0">
+              {videos.map((v, i) => (
+                <button
+                  key={v.id + i}
+                  onClick={() => setActive(i)}
+                  className={`shrink-0 text-left transition-colors hover:text-brand-accent ${
+                    i === active ? "text-brand-accent" : "text-brand-light"
+                  }`}
+                >
+                  <div className="relative w-40 overflow-hidden">
+                    <SmartImage
+                      src={thumb(v.id)}
+                      alt={v.title}
+                      loading="lazy"
+                      className="aspect-video w-full object-cover"
+                    />
+                  </div>
+                  <span className="mt-2 block font-display text-xs leading-snug">
+                    {v.title}
+                  </span>
+                </button>
+              ))}
+            </div>
+            <div className="hidden lg:flex lg:flex-col lg:divide-y lg:divide-brand-light/10">
+              {videos.map((v, i) => (
+                <button
+                  key={v.id + i}
+                  onClick={() => setActive(i)}
+                  className={`flex items-center gap-4 py-4 text-left transition-colors hover:text-brand-accent ${
+                    i === active ? "text-brand-accent" : "text-brand-light"
+                  }`}
+                >
+                  <span className="font-display text-2xl text-brand-light/30">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="relative w-28 shrink-0 overflow-hidden">
+                    <SmartImage
+                      src={thumb(v.id)}
+                      alt={v.title}
+                      loading="lazy"
+                      className="aspect-video w-full object-cover"
+                    />
+                  </div>
+                  <span className="font-display text-sm leading-snug md:text-base">
+                    {v.title}
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -153,10 +153,10 @@ function HomePage() {
 
       {/* WIDE IMAGE */}
       <section className="reveal-block relative h-[60vh] min-h-[420px] w-full overflow-hidden">
-        <img decoding="async"
+        <SmartImage
           src={palcoAsset}
           alt="Performance ao piano"
-          loading="eager"
+          loading="lazy"
           width={1328}
           height={624}
           className="absolute inset-0 h-full w-full object-cover"

@@ -6,6 +6,7 @@ import palcoAsset from "@/assets/globo-danella.webp";
 import album1 from "@/assets/album-1.webp";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Scrollytelling } from "@/components/Scrollytelling";
+import { SmartImage } from "@/components/SmartImage";
 
 export const Route = createFileRoute("/")({
   head: () => ({

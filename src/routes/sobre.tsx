@@ -36,7 +36,7 @@ function SobrePage() {
             <img decoding="async"
               src={sobreImg.url}
               alt="Retrato editorial de Danella"
-              loading="lazy"
+              loading="eager"
               width={1200}
               height={1500}
               className="w-full object-cover"

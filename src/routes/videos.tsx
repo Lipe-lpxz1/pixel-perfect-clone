@@ -76,7 +76,7 @@ function VideosPage() {
                   <img decoding="async"
                     src={thumb(v.id)}
                     alt={v.title}
-                    loading="lazy"
+                    loading="eager"
                     className="aspect-video w-full object-cover"
                   />
                 </div>

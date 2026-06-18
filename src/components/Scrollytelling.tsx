@@ -93,7 +93,7 @@ export function Scrollytelling() {
               <img decoding="async"
                 src={c.img}
                 alt={c.title}
-                loading="lazy"
+                loading="eager"
                 className="h-full w-full object-cover"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent" />
@@ -140,7 +140,7 @@ export function Scrollytelling() {
                 key={c.no}
                 src={c.img}
                 alt={c.title}
-                loading="lazy"
+                loading="eager"
                 className="absolute inset-0 h-full w-full object-cover transition-all duration-[1400ms] ease-out"
                 style={{
                   opacity: active === i ? 1 : 0,

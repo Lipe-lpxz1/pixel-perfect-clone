@@ -129,7 +129,7 @@ function HomePage() {
                 height={352}
                 frameBorder={0}
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
+                loading="eager"
               />
             </div>
           </div>
@@ -138,7 +138,7 @@ function HomePage() {
             <img decoding="async"
               src={album1}
               alt="Capa do álbum Ecos de Silêncio"
-              loading="lazy"
+              loading="eager"
               width={1024}
               height={1280}
               className="absolute inset-0 h-full w-full object-cover"
@@ -154,7 +154,7 @@ function HomePage() {
         <img decoding="async"
           src={palcoAsset}
           alt="Performance ao piano"
-          loading="lazy"
+          loading="eager"
           width={1024}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"

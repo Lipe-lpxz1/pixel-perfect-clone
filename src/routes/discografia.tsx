@@ -71,7 +71,7 @@ function DiscografiaPage() {
                 <img decoding="async"
                   src={r.cover}
                   alt={`Capa do álbum ${r.title}`}
-                  loading="lazy"
+                  loading="eager"
                   width={1024}
                   height={1024}
                   className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -95,7 +95,7 @@ function DiscografiaPage() {
                     height={352}
                     frameBorder={0}
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
+                    loading="eager"
                   />
                 </div>
               </div>

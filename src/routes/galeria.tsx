@@ -56,7 +56,7 @@ function GaleriaPage() {
             <img src={images[3].src} alt={images[3].alt} loading="lazy" className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
           </button>
           <button onClick={() => setActive(4)} className="gallery-tile group relative col-span-12 overflow-hidden">
-            <img src={images[4].src} alt={images[4].alt} loading="lazy" className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src={images[4].src} alt={images[4].alt} loading="lazy" className="aspect-[16/9] w-full object-cover object-bottom transition-transform duration-700 group-hover:scale-105" />
           </button>
         </div>
       </div>

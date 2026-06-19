@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SectionLabel } from "@/components/SectionLabel";
-import { SmartImage } from "@/components/SmartImage";
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
@@ -18,12 +17,14 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "5qap5aO4i9A", title: "Sessão ao Vivo — Estúdio Vale" },
-  { id: "jfKfPfyJRdk", title: "Concerto Sala São Paulo" },
-  { id: "lTRiuFIWV54", title: "Performance ao Vivo" },
+  { id: "DZTir79OU3j", title: "Performance — Reel 01" },
+  { id: "CtP301TvsG_", title: "Bastidores — Reel 02" },
+  { id: "DOo0pdhjyu9", title: "Ao Vivo — Reel 03" },
+  { id: "DZXlXSmse1J", title: "Estúdio — Reel 04" },
+  { id: "LxvezRvn58", title: "Clipe — Reel 05" },
 ];
 
-const thumb = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+const embedUrl = (id: string) => `https://www.instagram.com/p/${id}/embed`;
 
 function VideosPage() {
   const [active, setActive] = useState<number>(0);
@@ -41,14 +42,15 @@ function VideosPage() {
         <div className="grid grid-cols-12 gap-8 md:gap-12">
           {/* Player principal */}
           <div className="col-span-12 lg:col-span-8">
-            <div className="aspect-video w-full overflow-hidden bg-brand-muted">
+            <div className="mx-auto w-full max-w-[540px] overflow-hidden bg-brand-muted lg:mx-0">
               <iframe
                 key={videos[active].id}
-                src={`https://www.youtube.com/embed/${videos[active].id}?rel=0`}
+                src={embedUrl(videos[active].id)}
                 title={videos[active].title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen
-                className="h-full w-full"
+                scrolling="no"
+                className="block h-[640px] w-full md:h-[720px]"
               />
             </div>
             <div className="mt-6 flex items-center justify-between border-b border-brand-light/10 pb-6">
@@ -69,13 +71,14 @@ function VideosPage() {
                     i === active ? "text-brand-accent" : "text-brand-light"
                   }`}
                 >
-                  <div className="relative w-40 overflow-hidden">
-                    <SmartImage
-                      src={thumb(v.id)}
-                      alt={v.title}
-                      loading="lazy"
-                      className="aspect-video w-full object-cover"
-                    />
+                  <div
+                    className={`flex aspect-[9/16] w-28 items-end bg-brand-muted p-3 transition-colors ${
+                      i === active ? "ring-1 ring-brand-accent" : ""
+                    }`}
+                  >
+                    <span className="font-display text-3xl text-brand-light/40">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                   </div>
                   <span className="mt-2 block font-display text-xs leading-snug">
                     {v.title}
@@ -95,14 +98,6 @@ function VideosPage() {
                   <span className="font-display text-2xl text-brand-light/30">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <div className="relative w-28 shrink-0 overflow-hidden">
-                    <SmartImage
-                      src={thumb(v.id)}
-                      alt={v.title}
-                      loading="lazy"
-                      className="aspect-video w-full object-cover"
-                    />
-                  </div>
                   <span className="font-display text-sm leading-snug md:text-base">
                     {v.title}
                   </span>

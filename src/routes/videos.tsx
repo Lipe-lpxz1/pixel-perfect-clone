@@ -17,11 +17,11 @@ export const Route = createFileRoute("/videos")({
 });
 
 const videos = [
-  { id: "DZTir79OU3j", title: "Performance — Reel 01" },
-  { id: "CtP301TvsG_", title: "Bastidores — Reel 02" },
-  { id: "DOo0pdhjyu9", title: "Ao Vivo — Reel 03" },
-  { id: "DZXlXSmse1J", title: "Estúdio — Reel 04" },
-  { id: "LxvezRvn58", title: "Clipe — Reel 05" },
+  { id: "DZTir79OU3j" },
+  { id: "CtP301TvsG_" },
+  { id: "DOo0pdhjyu9" },
+  { id: "DZXlXSmse1J" },
+  { id: "LxvezRvn58" },
 ];
 
 const embedUrl = (id: string) => `https://www.instagram.com/p/${id}/embed`;

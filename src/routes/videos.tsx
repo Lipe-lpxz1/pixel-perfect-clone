@@ -29,7 +29,7 @@ function VideosPage() {
   const [active, setActive] = useState<number>(0);
 
   return (
-    <section className="px-6 pt-40 pb-32 md:px-10 md:pt-48">
+    <section className="px-6 pt-40 pb-12 md:px-10 md:pb-16 md:pt-48 lg:pb-32">
       <div className="mx-auto max-w-7xl">
         <header className="mb-16 max-w-3xl animate-fade-up">
           <SectionLabel index="05">Vídeos</SectionLabel>

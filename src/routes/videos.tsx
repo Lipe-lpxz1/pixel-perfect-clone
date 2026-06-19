@@ -39,7 +39,7 @@ function VideosPage() {
           </h1>
         </header>
 
-        <div className="mx-auto flex w-full max-w-[540px] flex-col gap-6">
+        <div className="mx-auto grid w-full max-w-[540px] gap-6 lg:max-w-5xl lg:grid-cols-[minmax(420px,540px)_minmax(280px,1fr)] lg:items-start lg:gap-8">
           <div className="w-full overflow-hidden rounded-sm border border-brand-light/10 bg-brand-muted shadow-2xl shadow-black/20">
             <iframe
               key={videos[active].id}
@@ -53,14 +53,14 @@ function VideosPage() {
             />
           </div>
 
-          <div className="flex gap-3 overflow-x-auto pb-2 md:justify-center lg:flex-wrap lg:overflow-visible">
+          <div className="flex gap-3 overflow-x-auto pb-2 md:justify-center lg:grid lg:grid-cols-2 lg:content-start lg:overflow-visible lg:pb-0">
             {videos.map((v, i) => (
               <button
                 key={v.id}
                 type="button"
                 onClick={() => setActive(i)}
                 aria-pressed={i === active}
-                className={`shrink-0 border px-4 py-3 text-[10px] font-semibold uppercase tracking-luxury transition-colors ${
+                className={`shrink-0 border px-4 py-3 text-[10px] font-semibold uppercase tracking-luxury transition-colors lg:flex lg:min-h-28 lg:w-full lg:items-center lg:justify-center lg:px-5 lg:text-center ${
                   i === active
                     ? "border-brand-accent bg-brand-accent text-brand-dark"
                     : "border-brand-light/15 text-brand-light/60 hover:border-brand-accent hover:text-brand-light"

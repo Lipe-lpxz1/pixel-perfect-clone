@@ -24,7 +24,7 @@ const videos = [
   { id: "LxvezRvn58", label: "Vídeo 05" },
 ];
 
-const embedUrl = (id: string) => `https://www.instagram.com/p/${id}/embed`;
+const embedUrl = (id: string) => `https://www.instagram.com/reel/${id}/embed`;
 
 function VideosPage() {
   const [active, setActive] = useState<number>(0);
@@ -39,7 +39,7 @@ function VideosPage() {
           </h1>
         </header>
 
-        <div className="mx-auto flex max-w-[540px] flex-col gap-6">
+        <div className="mx-auto flex w-full max-w-[540px] flex-col gap-6">
           <div className="w-full overflow-hidden rounded-sm border border-brand-light/10 bg-brand-muted shadow-2xl shadow-black/20">
             <iframe
               key={videos[active].id}
@@ -48,11 +48,11 @@ function VideosPage() {
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               allowFullScreen
               scrolling="no"
-              className="block h-[640px] w-full md:h-[720px]"
+              className="block h-[690px] w-full md:h-[760px]"
             />
           </div>
 
-          <div className="flex gap-3 overflow-x-auto pb-2">
+          <div className="flex gap-3 overflow-x-auto pb-2 lg:justify-start">
             {videos.map((v, i) => (
               <button
                 key={v.id}

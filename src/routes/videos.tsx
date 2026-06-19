@@ -48,11 +48,11 @@ function VideosPage() {
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               allowFullScreen
               scrolling="no"
-              className="block h-[690px] w-full md:h-[760px]"
+              className="block h-[690px] w-full md:h-[760px] lg:h-[960px]"
             />
           </div>
 
-          <div className="flex gap-3 overflow-x-auto pb-2 lg:justify-start">
+          <div className="flex gap-3 overflow-x-auto pb-2 md:justify-center lg:flex-wrap lg:overflow-visible">
             {videos.map((v, i) => (
               <button
                 key={v.id}

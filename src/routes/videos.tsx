@@ -47,7 +47,7 @@ function VideosPage() {
               src={embedUrl(videos[active].id)}
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               allowFullScreen
-              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
+              sandbox="allow-scripts allow-same-origin allow-forms"
               scrolling="no"
               className="block h-[690px] w-full md:h-[760px] lg:h-[960px]"
             />

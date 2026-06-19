@@ -24,7 +24,7 @@ const videos = [
   { id: "LxvezRvn58", label: "Vídeo 05" },
 ];
 
-const embedUrl = (id: string) => `https://www.instagram.com/reel/${id}/embed`;
+const embedUrl = (id: string) => `https://www.instagram.com/reel/${id}/embed/`;
 
 function VideosPage() {
   const [active, setActive] = useState<number>(0);
@@ -47,6 +47,7 @@ function VideosPage() {
               src={embedUrl(videos[active].id)}
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               allowFullScreen
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
               scrolling="no"
               className="block h-[690px] w-full md:h-[760px] lg:h-[960px]"
             />

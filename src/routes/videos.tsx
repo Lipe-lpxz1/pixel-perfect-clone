@@ -46,61 +46,36 @@ function VideosPage() {
               <iframe
                 key={videos[active].id}
                 src={embedUrl(videos[active].id)}
-                title={videos[active].title}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen
                 scrolling="no"
                 className="block h-[640px] w-full md:h-[720px]"
               />
             </div>
-            <div className="mt-6 flex items-center justify-between border-b border-brand-light/10 pb-6">
-              <h2 className="font-display text-xl md:text-2xl">
-                {videos[active].title}
-              </h2>
-            </div>
           </div>
 
-          {/* Lista de vídeos — vertical no desktop, scroll horizontal em mobile/tablet */}
+          {/* Thumbnails — scroll horizontal em todos os breakpoints */}
           <div className="col-span-12 lg:col-span-4">
-            <div className="flex gap-4 overflow-x-auto lg:hidden">
+            <div className="flex gap-4 overflow-x-auto">
               {videos.map((v, i) => (
                 <button
                   key={v.id + i}
                   onClick={() => setActive(i)}
-                  className={`shrink-0 text-left transition-colors hover:text-brand-accent ${
-                    i === active ? "text-brand-accent" : "text-brand-light"
+                  className={`shrink-0 transition-opacity hover:opacity-80 ${
+                    i === active ? "opacity-100" : "opacity-60"
                   }`}
                 >
                   <div
-                    className={`flex aspect-[9/16] w-28 items-end bg-brand-muted p-3 transition-colors ${
+                    className={`aspect-[9/16] w-28 overflow-hidden bg-brand-muted md:w-32 ${
                       i === active ? "ring-1 ring-brand-accent" : ""
                     }`}
                   >
-                    <span className="font-display text-3xl text-brand-light/40">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
+                    <iframe
+                      src={embedUrl(v.id)}
+                      scrolling="no"
+                      className="pointer-events-none h-full w-full"
+                    />
                   </div>
-                  <span className="mt-2 block font-display text-xs leading-snug">
-                    {v.title}
-                  </span>
-                </button>
-              ))}
-            </div>
-            <div className="hidden lg:flex lg:flex-col lg:divide-y lg:divide-brand-light/10">
-              {videos.map((v, i) => (
-                <button
-                  key={v.id + i}
-                  onClick={() => setActive(i)}
-                  className={`flex items-center gap-4 py-4 text-left transition-colors hover:text-brand-accent ${
-                    i === active ? "text-brand-accent" : "text-brand-light"
-                  }`}
-                >
-                  <span className="font-display text-2xl text-brand-light/30">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-display text-sm leading-snug md:text-base">
-                    {v.title}
-                  </span>
                 </button>
               ))}
             </div>

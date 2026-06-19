@@ -216,6 +216,29 @@
   }
 }
 
+/* Discografia: mobile/tablet keeps the desktop rhythm without squeezing into two columns */
+@media (max-width: 1023.98px) {
+  .discografia-record::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .discografia-cover {
+    float: left;
+    width: min(42%, 220px);
+    margin: 0 1.25rem 0.9rem 0;
+  }
+  .discografia-copy iframe {
+    clear: both;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .discografia-cover {
+    width: min(38%, 280px);
+    margin: 0 2rem 1.25rem 0;
+  }
+}
+
 @layer utilities {
   .reveal-block {
     animation: reveal-block both;

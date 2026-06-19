@@ -64,11 +64,11 @@ function DiscografiaPage() {
           {records.map((r, i) => (
             <article
               key={r.title}
-              className={`grid grid-cols-2 items-center gap-6 md:gap-20 ${
-                i % 2 === 1 ? "[&>figure]:order-2" : ""
+              className={`discografia-record items-center gap-6 md:gap-20 lg:grid lg:grid-cols-2 ${
+                i % 2 === 1 ? "lg:[&>figure]:order-2" : ""
               }`}
             >
-              <figure className="group relative overflow-hidden">
+              <figure className="discografia-cover group relative overflow-hidden">
               <SmartImage
                   src={r.cover}
                   alt={`Capa do álbum ${r.title}`}
@@ -78,7 +78,7 @@ function DiscografiaPage() {
                   className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </figure>
-              <div>
+              <div className="discografia-copy">
                 <p className="text-[10px] uppercase tracking-luxury text-brand-accent">
                   {r.year} · {r.type}
                 </p>

@@ -20,7 +20,7 @@ const videos = [
   { id: "DZXlXSmse1J", label: "Vídeo 01" },
   { id: "DLxvezRvn58", label: "Vídeo 02" },
   { id: "DEU3R0rRfdi", label: "Vídeo 03" },
-  { id: "DMYcOKLSQqt", label: "Vídeo 04" },
+  { id: "C-KxKuxs2h8", label: "Vídeo 04" },
   { id: "DERvxroOVM0", label: "Vídeo 05" },
 ];
 

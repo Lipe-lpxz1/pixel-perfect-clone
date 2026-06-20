@@ -68,7 +68,7 @@ export function SiteHeader() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {}
       <div
         className={`lg:hidden overflow-hidden bg-brand-dark/95 backdrop-blur-md transition-[max-height,opacity] duration-500 ${
           open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"

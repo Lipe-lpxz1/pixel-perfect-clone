@@ -64,7 +64,7 @@ function DiscografiaPage() {
           {records.map((r, i) => (
             <article
               key={r.title}
-              className={`discografia-record grid grid-cols-[minmax(120px,40%)_1fr] items-center gap-5 md:grid-cols-[minmax(260px,42%)_1fr] md:gap-10 lg:grid-cols-2 lg:gap-20 ${
+              className={`discografia-record grid grid-cols-[minmax(120px,40%)_1fr] items-start gap-5 md:grid-cols-[minmax(260px,42%)_1fr] md:gap-10 lg:grid-cols-2 lg:items-center lg:gap-20 ${
                 i % 2 === 1 ? "lg:[&>figure]:order-2" : ""
               }`}
             >

@@ -218,9 +218,13 @@
 
 /* Discografia: preserve the desktop-like split while keeping mobile text readable */
 @media (max-width: 767.98px) {
+  .discografia-record {
+    row-gap: 1rem;
+  }
   .discografia-copy h2 {
     font-size: clamp(1.45rem, 7vw, 2rem);
     line-height: 1.02;
+    margin-top: 0.75rem;
   }
   .discografia-copy h2,
   .discografia-description {
@@ -241,6 +245,9 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
+  .discografia-record {
+    row-gap: 1.5rem;
+  }
   .discografia-copy h2 {
     font-size: clamp(2.4rem, 7vw, 3.75rem);
   }

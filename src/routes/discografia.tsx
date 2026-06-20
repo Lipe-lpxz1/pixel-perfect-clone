@@ -51,20 +51,20 @@ const records = [
 
 function DiscografiaPage() {
   return (
-    <section className="px-6 pt-40 pb-32 md:px-10 md:pt-48">
+    <section className="px-6 pt-32 pb-20 md:px-10 md:pt-40 md:pb-28 lg:pt-48 lg:pb-32">
       <div className="mx-auto max-w-7xl">
-        <header className="mb-20 max-w-3xl animate-fade-up">
+        <header className="mb-12 max-w-3xl animate-fade-up md:mb-16 lg:mb-20">
           <SectionLabel index="04">Discografia</SectionLabel>
           <h1 className="mt-6 font-display title-fluid text-balance">
             Músicas <em>autorais</em>.
           </h1>
         </header>
 
-        <div className="space-y-20 md:space-y-32">
+        <div className="space-y-12 md:space-y-20 lg:space-y-32">
           {records.map((r, i) => (
             <article
               key={r.title}
-              className={`discografia-record grid grid-cols-[minmax(116px,38%)_1fr] items-start gap-x-5 gap-y-6 md:grid-cols-[minmax(220px,42%)_1fr] md:gap-x-10 md:gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-20 ${
+              className={`discografia-record grid grid-cols-[minmax(120px,40%)_1fr] items-center gap-5 md:grid-cols-[minmax(260px,42%)_1fr] md:gap-10 lg:grid-cols-2 lg:gap-20 ${
                 i % 2 === 1 ? "lg:[&>figure]:order-2" : ""
               }`}
             >

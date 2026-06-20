@@ -218,51 +218,38 @@
 
 /* Discografia: preserve the desktop-like split while keeping mobile text readable */
 @media (max-width: 767.98px) {
-  .discografia-copy {
-    display: contents;
-  }
   .discografia-copy h2 {
-    font-size: clamp(1.35rem, 8vw, 2.15rem);
+    font-size: clamp(1.45rem, 7vw, 2rem);
     line-height: 1.02;
   }
-  .discografia-copy > p:first-child,
-  .discografia-copy h2 {
-    grid-column: 2;
+  .discografia-copy h2,
+  .discografia-description {
+    max-width: none;
   }
-  .discografia-description,
-  .discografia-copy > div {
-    grid-column: 1 / -1;
+  .discografia-description {
+    margin-top: 0.85rem;
   }
   .discografia-copy p {
-    font-size: 0.78rem;
-    line-height: 1.55;
+    font-size: 0.72rem;
+    line-height: 1.45;
+  }
+  .discografia-copy > div {
+    margin-top: 1rem;
   }
   .discografia-player {
-    height: 220px;
+    height: 160px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
-  .discografia-copy {
-    display: contents;
-  }
-  .discografia-copy > p:first-child,
-  .discografia-copy h2 {
-    grid-column: 2;
-  }
-  .discografia-description,
-  .discografia-copy > div {
-    grid-column: 1 / -1;
-  }
   .discografia-copy h2 {
     font-size: clamp(2.4rem, 7vw, 3.75rem);
   }
-  .discografia-player {
-    height: 300px;
+  .discografia-copy h2,
+  .discografia-description {
+    max-width: none;
   }
-}
-@media (min-width: 1024px) {
-  .discografia-copy {
-    display: block;
+  .discografia-player {
+    height: 280px;
   }
 }
 

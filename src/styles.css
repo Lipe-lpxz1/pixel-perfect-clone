@@ -42,7 +42,7 @@
 :root {
   --radius: 0.25rem;
 
-  /* Rose Noir — sophisticated blush & rose gold on deep plum */
+  
   --brand-dark: oklch(0.16 0.022 15);
   --brand-muted: oklch(0.22 0.028 18);
   --brand-light: oklch(0.95 0.018 35);
@@ -87,7 +87,7 @@
 }
 
 .dark {
-  /* Site is dark by default; .dark mirrors :root */
+  
 }
 
 @layer base {
@@ -196,7 +196,6 @@
   }
 }
 
-/* Sobre page: mobile + tablet — image floats so text wraps beside AND below it */
 @media (max-width: 1023.98px) {
   .sobre-figure {
     float: left;
@@ -216,7 +215,6 @@
   }
 }
 
-/* Discografia: preserve the desktop-like split while keeping mobile text readable */
 @media (max-width: 767.98px) {
   .discografia-record {
     row-gap: 1rem;

@@ -77,7 +77,7 @@ export function Scrollytelling() {
         </div>
       </div>
 
-      {/* MOBILE: stacked layout */}
+      {}
       <div className="mx-auto flex max-w-7xl flex-col gap-16 px-6 py-16 md:hidden">
         {chapters.map((c) => (
           <article key={c.no} className="flex flex-col gap-5">
@@ -105,7 +105,7 @@ export function Scrollytelling() {
         ))}
       </div>
 
-      {/* DESKTOP/TABLET: sticky scrollytelling */}
+      {}
       <div className="mx-auto hidden max-w-7xl grid-cols-[minmax(0,1fr)_416px] gap-10 px-6 py-28 md:grid lg:grid-cols-12 lg:gap-16 lg:px-10">
         <ol className="min-w-0 lg:col-span-5">
           {chapters.map((c, i) => (
@@ -157,7 +157,6 @@ export function Scrollytelling() {
           </div>
         </div>
       </div>
-
 
     </section>
   );

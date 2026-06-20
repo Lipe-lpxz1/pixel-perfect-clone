@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <>
-      {/* HERO */}
+      {}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
         <SmartImage
           src={heroAsset}
@@ -84,7 +84,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* INTRO */}
+      {}
       <section className="reveal-block px-6 py-32 md:px-10 md:py-44">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-12">
@@ -107,11 +107,10 @@ function HomePage() {
         </div>
       </section>
 
-      {/* SCROLLYTELLING */}
+      {}
       <Scrollytelling />
 
-
-      {/* FEATURED RELEASE + PLAYER */}
+      {}
       <section className="reveal-block border-t border-border bg-brand-muted/30 px-6 py-12 md:px-10 lg:py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.1fr_1fr] md:gap-16">
           <div>
@@ -150,8 +149,7 @@ function HomePage() {
         </div>
       </section>
 
-
-      {/* WIDE IMAGE */}
+      {}
       <section className="reveal-block relative h-[60vh] min-h-[420px] w-full overflow-hidden">
         <SmartImage
           src={palcoAsset}
@@ -169,7 +167,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* CTA BOOKING */}
+      {}
       <section className="reveal-block px-6 py-32 md:px-10 md:py-44">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <SectionLabel index="04">Contratação</SectionLabel>

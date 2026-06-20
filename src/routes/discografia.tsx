@@ -64,7 +64,7 @@ function DiscografiaPage() {
           {records.map((r, i) => (
             <article
               key={r.title}
-              className={`discografia-record items-center gap-6 md:gap-20 lg:grid lg:grid-cols-2 ${
+              className={`discografia-record grid grid-cols-[minmax(116px,38%)_1fr] items-start gap-x-5 gap-y-6 md:grid-cols-[minmax(220px,42%)_1fr] md:gap-x-10 md:gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-20 ${
                 i % 2 === 1 ? "lg:[&>figure]:order-2" : ""
               }`}
             >
@@ -78,21 +78,21 @@ function DiscografiaPage() {
                   className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </figure>
-              <div className="discografia-copy">
+              <div className="discografia-copy min-w-0 self-center">
                 <p className="text-[10px] uppercase tracking-luxury text-brand-accent">
                   {r.year} · {r.type}
                 </p>
                 <h2 className="mt-4 font-display title-fluid">
                   {r.title}
                 </h2>
-                <p className="mt-6 max-w-md leading-relaxed text-brand-light/65">
+                <p className="discografia-description mt-6 max-w-md leading-relaxed text-brand-light/65">
                   {r.description}
                 </p>
-                <div className="mt-8 overflow-hidden rounded-sm">
+                <div className="mt-5 overflow-hidden rounded-sm md:mt-8">
                   <iframe
                     title={`Spotify ${r.title}`}
                     src="https://open.spotify.com/embed/playlist/16P1nQXM2VTPz4ugAQ1LaW?utm_source=generator&theme=0"
-                    className="block w-full"
+                    className="discografia-player block w-full"
                     height={352}
                     frameBorder={0}
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

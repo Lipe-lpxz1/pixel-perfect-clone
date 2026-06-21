@@ -49,12 +49,6 @@ const records = [
   },
 ];
 
-function splitDescription(text: string): [string, string] {
-  const mid = Math.floor(text.length / 2);
-  const spaceIdx = text.lastIndexOf(" ", mid);
-  const splitAt = spaceIdx > 0 ? spaceIdx : mid;
-  return [text.slice(0, splitAt), text.slice(splitAt + 1)];
-}
 
 function SpotifyPlayer({ title, compact = false }: { title: string; compact?: boolean }) {
   return (

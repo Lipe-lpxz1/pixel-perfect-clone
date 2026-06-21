@@ -50,7 +50,7 @@ const records = [
 ];
 function SpotifyPlayer({ title }: { title: string }) {
   return (
-    <div className="overflow-hidden rounded-sm">
+    <div className="discografia-player-wrap overflow-hidden rounded-sm">
       <iframe
         title={`Spotify ${title}`}
         src="https://open.spotify.com/embed/playlist/16P1nQXM2VTPz4ugAQ1LaW?utm_source=generator&theme=0"

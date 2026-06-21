@@ -56,14 +56,14 @@ function splitDescription(text: string): [string, string] {
   return [text.slice(0, splitAt), text.slice(splitAt + 1)];
 }
 
-function SpotifyPlayer({ title }: { title: string }) {
+function SpotifyPlayer({ title, compact = false }: { title: string; compact?: boolean }) {
   return (
     <div className="overflow-hidden rounded-sm">
       <iframe
         title={`Spotify ${title}`}
         src="https://open.spotify.com/embed/playlist/16P1nQXM2VTPz4ugAQ1LaW?utm_source=generator&theme=0"
         className="discografia-player block w-full"
-        height={352}
+        height={compact ? 232 : 352}
         frameBorder={0}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="eager"

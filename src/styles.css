@@ -235,6 +235,9 @@
     font-size: 0.72rem;
     line-height: 1.45;
   }
+  .discografia-player {
+    height: clamp(220px, 62vw, 320px) !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .discografia-record {
@@ -246,6 +249,9 @@
   .discografia-copy h2,
   .discografia-description {
     max-width: none;
+  }
+  .discografia-player {
+    height: 320px !important;
   }
 }
 

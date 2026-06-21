@@ -48,16 +48,14 @@ const records = [
       "Fruto de uma parceria emocionante com o icônico rapper Pepeu, a música 'Nosso Amor' é uma ode a um amor de outras eras. Com uma fusão envolvente, a canção celebra a conexão telepática, o desejo intenso e a certeza de que algumas almas foram feitas para se encontrar. Uma música para sentir, dançar e celebrar a plenitude de um amor indescritível.",
   },
 ];
-
-
-function SpotifyPlayer({ title, compact = false }: { title: string; compact?: boolean }) {
+function SpotifyPlayer({ title }: { title: string }) {
   return (
     <div className="overflow-hidden rounded-sm">
       <iframe
         title={`Spotify ${title}`}
         src="https://open.spotify.com/embed/playlist/16P1nQXM2VTPz4ugAQ1LaW?utm_source=generator&theme=0"
         className="discografia-player block w-full"
-        height={compact ? 232 : 352}
+        height={352}
         frameBorder={0}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="eager"
@@ -86,8 +84,10 @@ function DiscografiaPage() {
                 className="discografia-record lg:grid lg:grid-cols-2 lg:items-center lg:gap-20"
               >
                 <figure
-                  className={`discografia-cover group relative mb-3 w-[42%] overflow-hidden sm:w-[38%] lg:mb-0 lg:w-full ${
-                    reverse ? "float-right ml-5 lg:float-none lg:ml-0 lg:order-2" : "float-left mr-5 lg:float-none lg:mr-0"
+                  className={`discografia-cover group relative mb-3 w-[44%] overflow-hidden sm:w-[40%] lg:mb-0 lg:w-full ${
+                    reverse
+                      ? "float-right ml-5 lg:float-none lg:ml-0 lg:order-2"
+                      : "float-left mr-5 lg:float-none lg:mr-0"
                   }`}
                 >
                   <SmartImage
@@ -107,18 +107,14 @@ function DiscografiaPage() {
                   <h2 className="mt-4 font-display title-fluid">{r.title}</h2>
 
                   <div
-                    className={`mt-5 mb-3 w-[48%] sm:w-[44%] lg:hidden ${
+                    className={`mt-5 mb-4 w-[46%] sm:w-[42%] lg:hidden ${
                       reverse ? "float-left mr-5" : "float-right ml-5"
                     }`}
                   >
-                    <SpotifyPlayer title={r.title} compact />
+                    <SpotifyPlayer title={r.title} />
                   </div>
 
-                  <p
-                    className="discografia-description mt-6 leading-relaxed text-brand-light/65 lg:max-w-md"
-                    style={{ hyphens: "auto", WebkitHyphens: "auto", msHyphens: "auto" } as React.CSSProperties}
-                    lang="pt-BR"
-                  >
+                  <p className="discografia-description mt-6 leading-relaxed text-brand-light/65 lg:max-w-md">
                     {r.description}
                   </p>
 
@@ -136,3 +132,4 @@ function DiscografiaPage() {
     </section>
   );
 }
+

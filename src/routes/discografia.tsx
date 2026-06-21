@@ -48,13 +48,14 @@ const records = [
       "Fruto de uma parceria emocionante com o icônico rapper Pepeu, a música 'Nosso Amor' é uma ode a um amor de outras eras. Com uma fusão envolvente, a canção celebra a conexão telepática, o desejo intenso e a certeza de que algumas almas foram feitas para se encontrar. Uma música para sentir, dançar e celebrar a plenitude de um amor indescritível.",
   },
 ];
+
 function SpotifyPlayer({ title }: { title: string }) {
   return (
-    <div className="discografia-player-wrap overflow-hidden rounded-sm">
+    <div className="overflow-hidden rounded-sm">
       <iframe
         title={`Spotify ${title}`}
         src="https://open.spotify.com/embed/playlist/16P1nQXM2VTPz4ugAQ1LaW?utm_source=generator&theme=0"
-        className="discografia-player block w-full"
+        className="block w-full"
         height={352}
         frameBorder={0}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -75,19 +76,17 @@ function DiscografiaPage() {
           </h1>
         </header>
 
-        <div className="space-y-16 lg:space-y-32">
+        <div className="space-y-20 md:space-y-24 lg:space-y-32">
           {records.map((r, i) => {
             const reverse = i % 2 === 1;
             return (
               <article
                 key={r.title}
-                className="discografia-record lg:grid lg:grid-cols-2 lg:items-center lg:gap-20"
+                className="grid gap-8 md:grid-cols-2 md:items-start md:gap-10 lg:items-center lg:gap-20"
               >
                 <figure
-                  className={`discografia-cover group relative mb-3 w-[44%] overflow-hidden sm:w-[40%] lg:mb-0 lg:w-full ${
-                    reverse
-                      ? "float-right ml-5 lg:float-none lg:ml-0 lg:order-2"
-                      : "float-left mr-5 lg:float-none lg:mr-0"
+                  className={`group relative overflow-hidden ${
+                    reverse ? "md:order-2" : ""
                   }`}
                 >
                   <SmartImage
@@ -100,30 +99,18 @@ function DiscografiaPage() {
                   />
                 </figure>
 
-                <div className="discografia-copy min-w-0">
+                <div className="min-w-0">
                   <p className="text-[10px] uppercase tracking-luxury text-brand-accent">
                     {r.year} · {r.type}
                   </p>
                   <h2 className="mt-4 font-display title-fluid">{r.title}</h2>
-
-                  <div
-                    className={`mt-5 mb-4 w-[46%] sm:w-[42%] lg:hidden ${
-                      reverse ? "float-left mr-5" : "float-right ml-5"
-                    }`}
-                  >
-                    <SpotifyPlayer title={r.title} />
-                  </div>
-
-                  <p className="discografia-description mt-6 leading-relaxed text-brand-light/65 lg:max-w-md">
+                  <p className="mt-5 leading-relaxed text-brand-light/65 md:mt-6 lg:max-w-md">
                     {r.description}
                   </p>
-
-                  <div className="hidden lg:mt-8 lg:block">
+                  <div className="mt-6 md:mt-8">
                     <SpotifyPlayer title={r.title} />
                   </div>
                 </div>
-
-                <div className="clear-both lg:hidden" />
               </article>
             );
           })}
@@ -132,4 +119,3 @@ function DiscografiaPage() {
     </section>
   );
 }
-

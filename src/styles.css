@@ -235,12 +235,6 @@
     font-size: 0.72rem;
     line-height: 1.45;
   }
-  .discografia-copy > div {
-    margin-top: 1rem;
-  }
-  .discografia-player {
-    height: 160px;
-  }
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .discografia-record {
@@ -253,10 +247,8 @@
   .discografia-description {
     max-width: none;
   }
-  .discografia-player {
-    height: 280px;
-  }
 }
+
 
 @layer utilities {
   .reveal-block {
